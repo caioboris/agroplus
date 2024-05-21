@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 import api from '../api';
+import style from '../style';
 
 const SalesHistory = () => {
   const [salesHistory, setSalesHistory] = useState([]);
@@ -25,16 +26,18 @@ const SalesHistory = () => {
   }, []);
 
   const renderItem = ({ item }) => (
-    <View style={styles.item}>
-      <Text>Data: {item.date}</Text>
-      <Text>Valor: {item.amount}</Text>
-      <Text>Produto: {item.product}</Text>
+    <View style={style.item}>
+      <Text>Data: {item.data}</Text>
+      <Text>Valor: {item.valor}</Text>
+      <Text>Produto: {item.produto}</Text>
     </View>
   );
 
   return (
-    <View style={styles.container}>
+    <View style={style.container}>
+      <Text style={style.title}>Histórico de Vendas</Text>
       <FlatList
+        style={style.lista}
         data={salesHistory}
         renderItem={renderItem}
         keyExtractor={item => item.id}
@@ -42,20 +45,5 @@ const SalesHistory = () => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 20,
-    paddingHorizontal: 10,
-  },
-  item: {
-    padding: 15,
-    marginVertical: 8,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 5,
-  },
-});
 
 export default SalesHistory;

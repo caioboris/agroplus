@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import api from '../api';
+import style from '../style';
 
 const ForgotPassword = ({ navigation }) => {
   const [userEmail, setEmail] = useState("");
@@ -16,16 +17,22 @@ const ForgotPassword = ({ navigation }) => {
   }
   
   return (
-    <View>
-      <Text>Esqueci minha senha</Text>
-      <TextInput placeholder="Email" />
-      <Button title="Recuperar Senha" onPress={() => {
-        let user = {
-          email: userEmail
-        };
-        forgetPassRequest(user);
-      }} />
-      <Button title="Voltar para Login" onPress={() => navigation.navigate('Login')} />
+    <View style={style.container}> 
+      <Text style={style.title}>Esqueci minha senha</Text>
+      <TextInput style={style.input} placeholder="Email" value={userEmail} onChangeText={setEmail} />
+      <View style={{display:'flex', alignContent: 'space-between', height:200}}>
+        <TouchableOpacity style={style.buttonPrimary} onPress={() => {
+          let user = {
+            email: userEmail
+          };
+          forgetPassRequest(user);
+        }}>
+          <Text style={style.textButton}>Recuperar senha</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={style.buttonSecondary} onPress={() => navigation.navigate('Login')}>
+          <Text style={style.textButton}>Voltar para Login</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

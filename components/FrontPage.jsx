@@ -1,4 +1,4 @@
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import style from '../style'
 
 const FrontPage = ({navigation}) =>{
@@ -6,12 +6,21 @@ const FrontPage = ({navigation}) =>{
     return(
         <View style={style.container}>
             <View style={style.header}>
-                <Image source={require('../assets/background.jpg')} style={{opacity: 0.6, width: 300}}/> 
                 <Text style={style.title}> AgroPlus</Text>
+                <Image source={require('../assets/background.jpg')} style={{opacity: 0.6, width: 300, borderRadius:4, marginTop:5}}/> 
             </View>
-            <Text>Criando uma nova experiência de vendas para empresas que alimentam o agro</Text>
-            <Button color="#90ee90" title="Cadastre-se" onPress={()=> navigation.navigate('Register')}/>
-            <Button color="#90ee90" title="Login" onPress={()=> navigation.navigate('Login')}/>
+            <Text style={style.textDefault}>Criando uma nova experiência de vendas para empresas que alimentam o agro</Text>
+            <View style={{display:'flex', alignContent: 'space-between', height:200}}>
+                <TouchableOpacity style={style.buttonPrimary} onPress={()=> navigation.navigate('Register')}>
+                    <Text>Cadastre-se</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={style.buttonSecondary} onPress={()=> navigation.navigate('Login')}>
+                    <Text>Login</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={style.buttonSecondary} onPress={()=> navigation.navigate('SalesHistory')}>
+                    <Text>Historico de Vendas</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }

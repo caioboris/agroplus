@@ -1,0 +1,53 @@
+[
+    {
+      "data": "2024-01-15",
+      "valor": "R$ 150.00",
+      "produto": "Fertilizante NPK"
+    },
+    {
+      "data": "2024-01-20",
+      "valor": "R$ 200.00",
+      "produto": "Herbicida"
+    },
+    {
+      "data": "2024-01-25",
+      "valor": "R$ 350.00",
+      "produto": "Pesticida"
+    },
+    {
+      "data": "2024-02-01",
+      "valor": "R$ 120.00",
+      "produto": "Sementes de Milho"
+    },
+    {
+      "data": "2024-02-05",
+      "valor": "R$ 180.00",
+      "produto": "Sementes de Soja"
+    },
+    {
+      "data": "2024-02-10",
+      "valor": "R$ 210.00",
+      "produto": "Adubo Orgânico"
+    },
+    {
+      "data": "2024-02-15",
+      "valor": "R$ 130.00",
+      "produto": "Inoculante"
+    },
+    {
+      "data": "2024-02-20",
+      "valor": "R$ 500.00",
+      "produto": "Trator Pequeno"
+    },
+    {
+      "data": "2024-02-25",
+      "valor": "R$ 75.00",
+      "produto": "Ferramentas Manuais"
+    },
+    {
+      "data": "2024-03-01",
+      "valor": "R$ 90.00",
+      "produto": "Equipamento de Irrigação"
+    }
+  ]
+  

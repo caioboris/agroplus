@@ -8,32 +8,61 @@ const style = StyleSheet.create({
         padding: 16,
       },
       input: {
-        width: '100%',
+        width: 400,
         height: 40,
         borderColor: 'lightgreen',
-        borderWidth: 1,
+        borderWidth: 1, 
+        borderRadius:3,
         marginBottom: 12,
         paddingLeft: 8,
       },
+      item: {
+        padding: 15,
+        marginVertical: 8,
+        borderColor: 'lightgreen',
+        borderWidth: 1,
+        borderRadius: 5,
+      },
       buttonPrimary: {
-        backgroundColor: 'green',
+        backgroundColor: 'lightgreen',
         width:200,
+        marginTop:10,
+        borderRadius:5,
+        alignItems:'center',
+        justifyContent:'center',
+        height:30,
         color:'green'
       },
       buttonSecondary: {
         backgroundColor:'white',
-        borderBlockColor:'lightGreen',
+        borderWidth:1,
+        marginTop:5,
+        borderColor:'lightgreen',
         width:200,
+        height:30,
+        borderRadius:5,
+        alignItems:'center',
+        justifyContent:'center',
         color: 'lightgreen'
       },
       title:{
-        fontSize: 16,
+        fontSize: 36,
         fontWeight:"bold"
       },
       header:{
         padding:10,
         margin: 15,
         alignItems: 'center'
+      },
+      textDefault:{
+        fontSize: 16
+      },
+      textButton:{
+        alignSelf:"center"
+      },
+      list:{
+        width:460,
+        margin:10
       }
 });
 
